@@ -1,0 +1,18 @@
+h1{
+    color:aqua;
+}
+input[type=text] {
+    border: 2px solid purple;
+    border-radius: 4px;
+}
+select:hover{
+    background-color:aquamarine;
+}
+input[type=radio]{
+    background-color: crimson;
+    color: crimson;
+}
+input[type=submit]{
+    color: aliceblue;
+    background-color:  crimson;
+}
