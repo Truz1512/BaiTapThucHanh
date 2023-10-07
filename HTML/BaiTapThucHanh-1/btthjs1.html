@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <form>
+            <p>
+            <label>Nhập số a:</label>
+            <input type="number" id="a" name="a"></p>
+            <p>
+            <label>Nhập số b:</label>
+            <input type="number" id="b" name="b"></p>
+            <p>Tổng của a và b là :</p>         
+        </form>
+    </body>
+    <button onclick="Tinhtong()">Tính tổng</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('button').onsubmit =tinhtong;
+        });
+
+        function Tinhtong() {
+            var a = parseInt(document.querySelector('#a').value);
+            var b = parseInt(document.querySelector('#b').value);
+            var s =a +b;
+            alert(s);
+            
+        }
+    </script>
+</html>
