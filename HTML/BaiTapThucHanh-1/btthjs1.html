@@ -4,13 +4,22 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+
+            document.querySelector('#submit').disable = true;
+
+            document.querySelector('#task').onkeyup = function() {
+                document.querySelector('#submit').disable = false;
+            };
+
             document.querySelector('#new-task').onsubmit = function() {
+
                 const li = document.createElement('li');
                 li.innerHTML = document.querySelector('#task').value;
 
                 document.querySelector('#tasks').append(li);
 
                 document.querySelector('#task').value = '';
+                document.querySelector('#submit').disable = true;
                 
                 return false;
             };
@@ -24,8 +33,8 @@
         <h1>Task</h1>
         <ul id="tasks"></ul>
         <form id="new-task">
-            <input type="text" id="task" autofocus placeholder="New Task">
-            <input type="submit">
+            <input type="text" id="task" autofocus placeholder="New Task" autocomplete="off">
+            <input type="submit" id="submit">
         </form>
     </body>
 </html>
