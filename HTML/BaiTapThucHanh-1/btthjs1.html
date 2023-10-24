@@ -1,81 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-    <body>
-        
-        <form>
-            <p>
-            <label>Ho ten (*)</label>
-            <input type="text" id="hoten" name="hoten"></p>
-            <p>
-            <label>Ten dang nhap (*)</label>
-            <input type="text" id="ten" name="ten"></p>
-            <p>
-            <label>Password (*)</label>
-            <input type="password" id="mk" name="mk"></p>    
-            <p>
-            <label>Nhap lai Passsword (*)</label>
-            <input type="password" id="cfmk" name="cfmk"></p>
-            <p>
-            <label>Quoc tich (*)</label>
-            <select id="quoctich" name="quoctich">
-                <option value="Vietnam">Vietnam</option>
-                <option value="USA">USA</option>
-            </select></p> 
-            <p>
-            <label>Email (*)</label>
-            <input type="text" id="email" name="email"></p>
-            <p>
-            <label>So dien thoai (*)</label>
-            <input type="number" id="sdt" name="sdt"></p>
-            <p>
-            <label>Cau hoi bi mat (*)</label>
-            <select id="cauhoi" name="cauhoi">
-                <option value="cau1">Cap 1 ban hoc truong gi</option>
-                <option value="cau2">Cap 2 ban hoc truong gi</option>
-            </select></p>
-            <p>
-            <label>Tra loi (*)</label>
-            <input type="text" id="tl" name="tl"></p>  
-        </form>
-    </body>
-    <button type="button" onclick="kiemtra()">Kiem tra</button>
-    <button type="submit" onclick="dangki()">Dang ki</button>
+<html>
+    <head>
+    
     <script>
-        
-        function kiemtra() {
-            var hoten = document.getElementById("hoten").value;
-            var ten = document.getElementById("ten").value;
-            var mk = document.getElementById("mk").value;
-            var cfmk = document.getElementById("cfmk").value;
-            var quoctich = document.getElementById("quoctich").value;
-            var email = document.getElementById("email").value;
-            var sdt = document.getElementById("sdt").value;
-            var cauhoi = document.getElementById("cauhoi").value;
-            var tl = document.getElementById("tl").value;
-
-            if (hoten ==="" || ten === "" || mk === "" || cfmk === "" || quoctich === "" || 
-                email === "" || sdt === "" || cauhoi === "" || tl === "") {
-                alert ('Vui long nhap du thong tin');
-                return false;
-            }
-            if (ten.length < 8) {
-                alert ('ten dang nhap co it nhat 8 ki tu');
-                return false;
-            }
-            if (mk !== cfmk) {
-                alert ('Mat khau khong khop');
-                return false;
-            }
-            if (email.indexOf("@") === -1) {
-                alert ('Email khong hop le');
-                return false;
-            }
-            return true;
-        }
-        function dangki() {
-            if (kiemtra()) {
-                alert ('Dang ki thanh cong');
-            }
-        }
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.color-change').forEach(function(button) {
+                button.onclick = function() {
+                    document.querySelector('#hello').style.color = button.dataset.color;
+                };
+            });
+        });
     </script>
+
+    <title>My Website</title>
+    </head>
+    <body>
+        <h1 id = "hello">Hello!</h1>
+        <button class="color-change" data-color="red">Red</button>
+        <button class="color-change" data-color="blue">Blue</button>
+        <button class="color-change" data-color="green">Green</button>
+    </body>
 </html>
