@@ -5,33 +5,20 @@
 <script>
 $(document).ready(function(){
   $("button").click(function(){
-    $("h1, h2, p").addClass("blue");
-    $("div").addClass("important");
+    alert("Background color = " + $("p").css("background-color"));
   });
 });
 </script>
-<style>
-.important {
-  font-weight: bold;
-  font-size: xx-large;
-}
-
-.blue {
-  color: blue;
-}
-</style>
 </head>
 <body>
 
-<h1>Mai Quang Truong - 2121055185</h1>
 <h2>Mai Quang Truong - 2121055185</h2>
 
-<p>Mai Quang Truong - 2121055185</p>
-<p>Mai Quang Truong - 2121055185</p>
+<p style="background-color:#ff0000">Mai Quang Truong - 2121055185</p>
+<p style="background-color:#00ff00">Mai Quang Truong - 2121055185</p>
+<p style="background-color:#0000ff">Mai Quang Truong - 2121055185</p>
 
-<div>Mai Quang Truong - 2121055185!</div><br>
-
-<button>Add classes to elements</button>
+<button>Return background-color of p</button>
 
 </body>
 </html>
