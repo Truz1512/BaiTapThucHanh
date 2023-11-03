@@ -3,18 +3,18 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
-$(document).ready(function(){
-  $("button").click(function(){
-    $.get("demo_test.asp", function(data, status){
-      alert("Data: " + data + "\nStatus: " + status);
-    });
+$.noConflict();
+jQuery(document).ready(function(){
+  jQuery("button").click(function(){
+    jQuery("p").text("jQuery is still working!");
   });
 });
 </script>
 </head>
 <body>
 
-<button>Mai Quang Truong - 2121055185</button>
+<p>Mai Quang Truong - 2121055185</p>
+<button>Test jQuery</button>
 
 </body>
 </html>
