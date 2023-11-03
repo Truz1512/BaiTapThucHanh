@@ -5,20 +5,33 @@
 <script>
 $(document).ready(function(){
   $("button").click(function(){
-    alert("Background color = " + $("p").css("background-color"));
+    var txt = "";
+    txt += "Width of div: " + $("#div1").width() + "</br>";
+    txt += "Height of div: " + $("#div1").height();
+    $("#div1").html(txt);
   });
 });
 </script>
+<style>
+#div1 {
+  height: 100px;
+  width: 300px;
+  padding: 10px;
+  margin: 3px;
+  border: 1px solid blue;
+  background-color: lightblue;
+}
+</style>
 </head>
 <body>
 
-<h2>Mai Quang Truong - 2121055185</h2>
+<div id="div1"></div>
+<br>
 
-<p style="background-color:#ff0000">Mai Quang Truong - 2121055185</p>
-<p style="background-color:#00ff00">Mai Quang Truong - 2121055185</p>
-<p style="background-color:#0000ff">Mai Quang Truong - 2121055185</p>
+<button>Display dimensions of div</button>
 
-<button>Return background-color of p</button>
+<p>Mai Quang Truong - 2121055185</p>
+<p>Mai Quang Truong - 2121055185</p>
 
 </body>
 </html>
