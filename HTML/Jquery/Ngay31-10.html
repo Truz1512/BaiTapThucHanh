@@ -4,20 +4,21 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-  $("button").click(function(){
+  $("#hide").click(function(){
     $("p").hide();
+  });
+  $("#show").click(function(){
+    $("p").show();
   });
 });
 </script>
 </head>
 <body>
 
-<h2>Mai Quang Truong - 2121051185</h2>
-
-<p>Mai Quang Truong - 2121051185</p>
 <p>Mai Quang Truong - 2121051185</p>
 
-<button>Click me</button>
+<button id="hide">Hide</button>
+<button id="show">Show</button>
 
 </body>
 </html>
