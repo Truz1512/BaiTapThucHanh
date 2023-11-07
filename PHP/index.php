@@ -1,8 +1,7 @@
 <?php
-    echo "MY FIRST PHP FILE";
-    echo "<h3>Hello world!</h3>";
-    echo "<select>";
-    echo "<option>1</option>";
-    echo "<option>2</option>";
-    echo "</select>";
+    $longAccount = 10000000;
+    echo "So tien trong tai khoan Long: $longAccount";
+    $HUMGPay = 10000000;
+    $longAccount = $longAccount + $HUMGPay;
+    echo "So tien trong tai khoan Long: $longAccount";
 ?>
