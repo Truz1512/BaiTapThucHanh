@@ -5,7 +5,19 @@
         <title></title>
     </head>
     <body>
-        Welcom <?php echo $_POST["name"]; ?><br>
-        Your email address is: <?php echo $_POST["email"]; ?>
+        <form action= "7-CalResult.php" method="get">
+            <p>First Number: </p>
+            <input type="number" name = "firstNumber"><br>
+            <p>Second Number: </p>
+            <input type="number" name = "secondNumber"><br>
+            <p></p>
+            <input type="submit" value="Add">
+
+            Result:
+            <?php
+                $result = $_GET["firstNumber"] + $_GET["secondNumber"];
+                echo $result;
+            ?>
+        </form>
     </body>
 </html>
