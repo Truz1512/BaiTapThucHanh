@@ -1,12 +1,11 @@
 
 <?php
-
-    $str = "in ra co bao nhieu chu h trong chuoi";
-    $count = 0;
-    for ($i = 0; $i < strlen($str); $i++) {
-        if ($str[$i] == 'h') {
-            $count++;
-        }
+    $a = 5;
+    $b = 7;
+    if ($a == $b) {
+        echo "Day la hinh vuong";
     }
-    echo "Chuoi tren co " . $count. " chu 'h'";
+    else {
+        echo "Day la hinh chu nhat";
+    }
 ?>
