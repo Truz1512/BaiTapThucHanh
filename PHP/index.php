@@ -5,19 +5,21 @@
         <title></title>
     </head>
     <body>
-        <form action= "7-CalResult.php" method="get">
-            <p>First Number: </p>
-            <input type="number" name = "firstNumber"><br>
-            <p>Second Number: </p>
-            <input type="number" name = "secondNumber"><br>
+        <!-- nhap thong tin -->
+        <form action= "result.php" method="get">
+            <p>Name: </p>
+            <input type="text" name = "name"><br>
+            <p>Password: </p>
+            <input type="password" name = "password"><br>
+            <p>SDT: </p>
+            <input type="number" name = "sodienthoai"><br>
+            <p>Email: </p>
+            <input type="text" name = "email"><br>
+            <p>Dia chi: </p>
+            <input type="text" name = "diachi"><br>
             <p></p>
-            <input type="submit" value="Add">
-
-            Result:
-            <?php
-                $result = $_GET["firstNumber"] + $_GET["secondNumber"];
-                echo $result;
-            ?>
+            <button type="submit">Dang ki</button>
         </form>
-    </body>
+        
+    </body>   
 </html>
