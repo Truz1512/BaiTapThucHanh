@@ -5,12 +5,12 @@
         <title></title>
     </head>
 <?php
-    // phuong thuc GET
-        $name = $_GET["name"];
-        $password = $_GET["password"];
-        $sodienthoai = $_GET["sodienthoai"];
-        $email = $_GET["email"];
-        $diachi = $_GET["diachi"];
+    // phuong thuc POST
+        $name = $_POST["name"];
+        $password = $_POST["password"];
+        $sodienthoai = $_POST["sodienthoai"];
+        $email = $_POST["email"];
+        $diachi = $_POST["diachi"];
 
     // in thong tin
         echo "<h1>Thong tin dang ki</h1>";

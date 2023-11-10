@@ -6,7 +6,7 @@
     </head>
     <body>
         <!-- nhap thong tin -->
-        <form action= "result.php" method="get">
+        <form action= "result.php" method="post">
             <p>Name: </p>
             <input type="text" name = "name"><br>
             <p>Password: </p>
