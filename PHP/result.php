@@ -6,26 +6,22 @@
     </head>
     <body>
         <?php
-            $tongdiem = $_GET["toan"] + $_GET["ly"] + $_GET["hoa"];
-            echo "Tong diem: " .$tongdiem;
-            if ($tongdiem >= 18 && $tongdiem < 22)
+            
+            $chieucao = $_POST["chieucao"];
+            $cannang = $_POST["cannang"];
+            $gioitinh = $_POST["gioitinh"];
+
+            if ($gioitinh == "nam" && $chieucao > 160 && $cannang > 50)
             {
-                echo " Ban dau CNTT, KHDL, Dia chat, Moi truong";
+                echo "Dat yeu cau vao cong ty";
             }
-            else if ($tongdiem >= 22)
+            else if ($gioitinh == "nu" && $chieucao > 150 && $cannang > 50 && $cannang < 70)
             {
-                echo " Ban dau CNTT chat luong cao, CNTT, KHDL, Dia chat, Moi truong";
+                echo "Dat yeu cau vao cong ty";
             }
-            else if ($tongdiem >= 17 && $tongdiem < 18)
+            else
             {
-                echo " Ban dau Dia chat, Moi truong";
-            }
-            else if ($tongdiem >=15 && $tongdiem < 17)
-            {
-                echo " Ban dau Moi truong";
-            }
-            else {
-                echo " Ban ko dau";
+                echo "Khong dat yeu cau vao cong ty";
             }
         ?>
     </body>
