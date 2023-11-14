@@ -2,18 +2,21 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title>Is it Christmas?</title>
     </head>
     <body>
-        <h2>Du bao nganh trung tuyen</h2>
-        <form action="result.php" method="get">
-            <p>Toan:</p>
-            <input type="number" name="toan"><br>
-            <p>Ly:</p>
-            <input type="number" name="ly"><br>
-            <p>Hoa:</p>
-            <input type="number" name="hoa"><br>
-            <input type="submit" value="Tong diem">
-        </form>
+        <h1>Is it Christmas?</h1>
+        <?php
+            $is_christmas = false;
+            if (date('m') == 12 && date('d') == 25) {
+                $is_christmas = true;
+            }
+            if ($is_christmas){
+                echo "Yes, it is Christmas";
+            }
+            else{
+                echo "No, it is not Christmas yet";
+            }
+        ?>
     </body>
 </html>
