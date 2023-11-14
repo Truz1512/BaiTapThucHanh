@@ -6,15 +6,27 @@
     </head>
     <body>
         <?php
-            echo "THE GAME ";
-            if ($_GET["response"] == "yes")
+            
+            if ($_GET["ngoaite"] == "USD")
             {
-                echo "HAS BEEN QUITED";
+                $result = $_GET["soluong"] * 23000;
+                echo $result;
             }
-            else {
-                echo "WILL BE COUNTINUED IN 3 SECOND";
+            else if ($_GET["ngoaite"] == "AUD")
+            {
+                $result = $_GET["soluong"] * 17000;
+                echo $result;
             }
-            echo "<br>AFTER IF STATEMENT";
+            else if ($_GET["ngoaite"] == "JPY")
+            {
+                $result = $_GET["soluong"] * 200;
+                echo $result;
+            }
+            else 
+            {
+                $result = $_GET["soluong"] * 27000;
+                echo $result;
+            }
         ?>
     </body>
 </html>
