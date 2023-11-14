@@ -5,18 +5,15 @@
         <title></title>
     </head>
     <body>
-        <h2>Currency exchange</h2>
+        <h2>Du bao nganh trung tuyen</h2>
         <form action="result.php" method="get">
-            <p>Amount:</p>
-            <input type="number" name="soluong"><br>
-            <p>Select currency:</p>
-            <select name="ngoaite">
-                <option value="USD">USD</option>
-                <option value="AUD">AUD</option>
-                <option value="JPY">JPY</option>
-                <option value="EUR">EUR</option>
-            </select>
-            <input type="submit" value="Convert">
+            <p>Toan:</p>
+            <input type="number" name="toan"><br>
+            <p>Ly:</p>
+            <input type="number" name="ly"><br>
+            <p>Hoa:</p>
+            <input type="number" name="hoa"><br>
+            <input type="submit" value="Tong diem">
         </form>
     </body>
 </html>

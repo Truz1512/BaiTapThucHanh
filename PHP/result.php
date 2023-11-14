@@ -6,26 +6,26 @@
     </head>
     <body>
         <?php
-            
-            if ($_GET["ngoaite"] == "USD")
+            $tongdiem = $_GET["toan"] + $_GET["ly"] + $_GET["hoa"];
+            echo "Tong diem: " .$tongdiem;
+            if ($tongdiem >= 18 && $tongdiem < 22)
             {
-                $result = $_GET["soluong"] * 23000;
-                echo $result;
+                echo " Ban dau CNTT, KHDL, Dia chat, Moi truong";
             }
-            else if ($_GET["ngoaite"] == "AUD")
+            else if ($tongdiem >= 22)
             {
-                $result = $_GET["soluong"] * 17000;
-                echo $result;
+                echo " Ban dau CNTT chat luong cao, CNTT, KHDL, Dia chat, Moi truong";
             }
-            else if ($_GET["ngoaite"] == "JPY")
+            else if ($tongdiem >= 17 && $tongdiem < 18)
             {
-                $result = $_GET["soluong"] * 200;
-                echo $result;
+                echo " Ban dau Dia chat, Moi truong";
             }
-            else 
+            else if ($tongdiem >=15 && $tongdiem < 17)
             {
-                $result = $_GET["soluong"] * 27000;
-                echo $result;
+                echo " Ban dau Moi truong";
+            }
+            else {
+                echo " Ban ko dau";
             }
         ?>
     </body>
