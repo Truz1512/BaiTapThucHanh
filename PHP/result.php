@@ -6,26 +6,30 @@
     </head>
     <body>
         <?php
-            $USD = 22300;
-            $EUR = 27300;
-            $SGD = 17000;
-            $JPY = 120;
-            $amount = $_GET['amount'];
-            echo "$amount USD is equal ";
-            if ($_GET["currency"] == "USD")
-            {
-                echo $amount + $USD;
+            if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+                $toan = $_GET["toan"];
+                $ly = $_GET["ly"];
+                $hoa = $_GET["hoa"];
+                $anh = $_GET["anh"];
+                $van = $_GET["van"];
+                $lichsu = $_GET["lichsu"];
+                $sum = $toan + $ly + $hoa +$anh +$van +$lichsu;
+                $count = 6;
+                $diemtb = $sum / $count;
+                echo "Diem trung binh la: " . $diemtb ." <br>";
             }
-            elseif ($_GET["currency"] == "EUR") {
-                echo $amount + $EUR;
+            if ($toan > 4 && $ly > 4 && $hoa > 4 && $anh >4 && $van >4 && $su > 4) {
+                if ($diemtb <5)
+                    echo "Hoc sinh yeu";
+                else if ($diemtb >=5 && $diemtb <=6.4)
+                    echo "Hoc sinh trung binh";
+                else if ($diemtb >=6.5 && $diemtb <=7.9)
+                    echo "Hoc sinh kha";
+                else
+                echo "Hoc sinh gioi";
             }
-            elseif ($_GET["currency"] == "SGD") {
-                echo $amount + $SGD;
-            }
-            else {
-                echo $amount + $JPY;
-            }
-            echo "VND"
+            else
+            echo "Hoc sinh yeu";
         ?>
     </body>
 </html>
