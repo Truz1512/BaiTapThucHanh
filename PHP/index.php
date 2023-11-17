@@ -6,22 +6,10 @@
     </head>
     <body>
         <?php
-            $currency = $_GET['currency'];
-            echo "$amount $currency is equal ";
-            switch (%$currency) {
-                case "USD":
-                    echo $amount * $USD;
-                    break;
-                case "EUR":
-                    echo $amount * $EUR;
-                    break;
-                case "SGD":
-                    echo $amount * $SGD;
-                    break;
-                case "JPY":
-                    echo $amount * $JPY;
-                    break;
-            }
+            $exchangeRate = array("USD" =>22300,"EUR"=> 27300, "SGD"=>17000,"JPY"=>120);
+            $amount = $_GET['amount'];
+            $currency = $_GET["currency"];
+            echo " $amount USD is equal " .number_format($amount * $exchangeRate[$currency]) . " VND";
         ?>
     </body>
 </html>
