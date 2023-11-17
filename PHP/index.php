@@ -22,5 +22,6 @@
                     echo $amount * $JPY;
                     break;
             }
+        ?>
     </body>
 </html>
