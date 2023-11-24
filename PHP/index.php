@@ -2,24 +2,42 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Kiem tra nang luc hoc</title>
+        <title>Date</title>
     </head>
     <body>
-        <h1>Kiem tra nang luc hoc</h1>
-        <form action="result.php" method="get">
-            <label for="toan">Toan: </label>
-            <input type="number" name="toan" min="0" max="10" required><br>
-            <label for="ly">Ly: </label>
-            <input type="number" name="ly" min="0" max="10" required><br>
-            <label for="hoa">Hoa: </label>
-            <input type="number" name="hoa" min="0" max="10" required><br>
-            <label for="anh">Anh: </label>
-            <input type="number" name="anh" min="0" max="10" required><br>
-            <label for="van">Van: </label>
-            <input type="number" name="van" min="0" max="10" required><br>
-            <label for="lic su">Lich su: </label>
-            <input type="number" name="lichsu" min="0" max="10" required><br>
-            <input type="submit" value="Kiểm tra">
+        <h1>Date</h1>
+        <form action="result.php" method="post">
+            <lable for="">Ngay: </lable>
+            <select name="date" id="date">
+                <?php
+                    $today = getdate();
+                    $current_date = $today['date'];
+                    for ($date = 1; $date <= 30; $date++){
+                        echo "<option value=\"$date\">$date</option>";
+                    }   
+                    ?>
+            </select>
+            <lable for="">Thang: </lable>
+            <select name="month" id="month">
+                <?php
+                    $today = getdate();
+                    $current_month = $today['month'];
+                    for ($month = 1; $month <= 12; $month++){
+                        echo "<option value=\"$month\">$month</option>";
+                    }   
+                    ?>
+            </select>
+            <lable for="">Nam: </lable>
+            <select name="year" id="year">
+                <?php
+                    $today = getdate();
+                    $current_year = $today['year'];
+                    for ($year = 1990; $year <= $current_year; $year++){
+                        echo "<option value=\"$year\">$year</option>";
+                    }   
+                    ?>
+            </select>
+            <input type="submit" name="submit" value="In">
         </form>
     </body>
 </html>
