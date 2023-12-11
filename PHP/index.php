@@ -2,38 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
 </head>
-<body>
-    <form action="" method="get">
-        <p>First number: </p>
-        <input type="number" name="firstNumber"><br>
-        <p>Second number: </p>
-        <input type="number" name="secondNumber"><br>
-        <p></p>
-        <input type="submit" name="add" value="+">
-        <input type="submit" name="minus" value="-">
-        <input type="submit" name="multiply" value="*">
-        <input type="submit" name="devide" value="/">
-    </form>
-
 <?php
-    if (isset($_GET['add'])){
-        $result = $_GET["firstNumber"] + $_GET["secondNumber"];
-        echo $result;
-    }
-    elseif (isset($_GET['minus'])){
-        $result = $_GET["firstNumber"] - $_GET["secondNumber"];
-        echo $result;
-    }
-    elseif (isset($_GET['multiply'])){
-        $result = $_GET["firstNumber"] * $_GET["secondNumber"];
-        echo $result;
-    }
-    elseif (isset($_GET['devide'])){
-        $result = $_GET["firstNumber"] / $_GET["secondNumber"];
-        echo $result;
-    }
+include ("connect.php");
 ?>
+<body>
+    <h2>Đăng nhập</h2>
+    <form action="result.php" method="post">
+        <label for="username">Tên đăng nhập:</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="password">Mật khẩu:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <input type="submit" value="Đăng nhập">
+        <input type="submit" value="Đăng ki">
+    </form>
 </body>
 </html>
